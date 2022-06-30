@@ -1,10 +1,9 @@
 import React from "react";
-import { blogPosts } from "../utils/SampleBlogs";
-import { Outlet, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-const BlogPost = () => {
+const BlogPost = ({ allBlogs }) => {
   let params = useParams();
-  let blog = blogPosts.find((blog) => blog.id === Number(params.blogId));
+  let blog = allBlogs.find((blog) => blog.id === Number(params.blogId));
   return (
     <div>
       <h1>Blogs:</h1>

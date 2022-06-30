@@ -1,13 +1,13 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import { Outlet, useSearchParams } from "react-router-dom";
 
-export default function Blogs() {
+const Blogs = () => {
   return (
     <div>
       <Navbar />
-      <h1>Blogs Page</h1>
       <Outlet />
     </div>
   );
-}
+};
+
+export default Blogs;
